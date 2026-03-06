@@ -4,8 +4,6 @@ import numpy as np
 import streamlit as st
 
 
-model = joblib.load("house_price_model.pkl")
-
 # Load trained model
 model = joblib.load("house_price_model.pkl")
 
@@ -29,3 +27,4 @@ if st.button("Predict Price"):
     prediction = model.predict(features)[0]
     st.success(f"Estimated House Price: {prediction:,.2f}")
   
+
